@@ -2,42 +2,27 @@
   <ion-content padding="true" class="has-header">
     
 
-    <ion-list id="jogos-list2" ng-repeat="jogo in jogos"  >
-      <div class="item item-body" id="jogos-list-item-container1" style="">
-        <div id="jogos-markdown2" class="show-list-numbers-and-dots">
+   <ion-list can-swipe="myswipe" ng-repeat="jogo in jogos"  >
 
-        </div>
-        <ion-list id="jogos-list4">
-          <ion-card>
-      <img src="http://esffpap.xyz/teste/imagens/jogos/{{jogo.capa}}"/>
-      <ion-card-content>
-        <ion-card-title>
-          {{jogo.titulo}}
-          </ion-card-title>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat similique unde aut doloremque veniam repellat mollitia iure laudantium veritatis voluptatem culpa autem sequi officiis placeat voluptates, nemo consectetur minus. Ducimus!
-        </p>
-      </ion-card-content>
-    </ion-card>
+      <ion-item ng-click="dadosJogo(jogo.id)">
+      <div style="margin: 0px; background-color: rgb(232, 235, 239); text-align: center;">
+<img src="http://esffpap.xyz/teste/imagens/jogos/{{jogo.capa}}" style="width:100%">
+      </div>
+      <h2>{{jogo.titulo}}</h2>
+      <p>{{jogo.publicadora}}</p>
+ 
+    </ion-item>
+
+
+
+
     </ion-list>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <ion-infinite-scroll
+          ng-show="paginacao"
+          icon="ion-loading-c"  
+          on-infinite="loadMore()"
+          distance="80%">
+</ion-infinite-scroll>
 
   </ion-content>
 </ion-view>

@@ -8,7 +8,15 @@
    -------------- */
 
 /*global angular*/
- angular.module('myApp',['ionic']).config(['$controllerProvider', function($controllerProvider) {
+ angular.module('myApp',['ionic'])
+
+
+ .config(['$controllerProvider', function($controllerProvider) {
 	$controllerProvider.allowGlobals();
-}]);
+}])
+ .config(function($ionicConfigProvider){
+
+ 	$ionicConfigProvider.backButton.previousTitleText(false).text("").icon("ion-arrow-lkeft-c");
+
+});
 

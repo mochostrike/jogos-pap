@@ -1,0 +1,28 @@
+<ion-view title="{{home}}" >
+<ion-nav-back-button class="button-clear"></ion-nav-back-button>
+<ion-content ng-repeat="jogo in oJogo" padding="true" class="has-header">
+
+
+    <div class="list card" id="cloud-card21">
+      <ion-item class="item-avatar" id="cloud-list-item6" style="">
+        <h2>{{jogo.titulo}}</h2>
+      </ion-item>
+      <div style="margin: 0px; background-color: rgb(232, 235, 239); text-align: center;">
+<img src="http://esffpap.xyz/teste/imagens/jogos/{{jogo.capa}}" style="width:100%">
+      </div>
+      <div class="item item-body" id="cloud-list-item-container4" style="">
+        <div id="cloud-markdown5" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">by 
+            <strong>{{jogo.publicadora}}</strong>
+          </p>
+        </div>
+        <div ng-init="videourl_video1=&quot;{{jogo.trailer}}?rel=0&amp;showinfo=0&quot;" style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;" id="cloud-video1">
+          <iframe src="{{jogo.titulo}}" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" width="560" height="315" frameborder="0"></iframe>
+        </div>
+      </div>
+
+  </ion-content>
+
+
+
+</ion-view>
